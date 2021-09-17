@@ -108,13 +108,13 @@
 
    使用 shift 选中多个组件， + ctrl 键 + 鼠标右键拖动
 
-## Axure 事件
+## 1、Axure 事件
 
 ![image-20210916163547664](README.assets/image-20210916163547664.png)
 
 ![image-20210916163632133](README.assets/image-20210916163632133.png)
 
-## Axure 动作
+## 2、Axure 动作
 
 ![image-20210916163727641](README.assets/image-20210916163727641.png)
 
@@ -124,7 +124,7 @@
 
 ![image-20210916163833473](README.assets/image-20210916163833473.png)
 
-## Component  组件的使用
+## 3、Component  组件的使用
 
 ​	将多个部件绑定在一起，一起作为一个部件。使用 shift 选定多个部件，右键选择 create Component 就会创建一个组件，通过移动到具体的页面进行使用. 
 
@@ -136,7 +136,7 @@
 
 ![image-20210916175512115](README.assets/image-20210916175512115.png)
 
-## Widget Style 
+## 4、Widget Style 
 
 ​		部件的样式可以进行修改， 点击上不的 ![image-20210916181254037](README.assets/image-20210916181254037.png) 这个图标或者 顶部菜单栏 == 》project ==> Widget Style Manager 
 
@@ -144,7 +144,7 @@
 
 ![image-20210916181314090](README.assets/image-20210916181314090.png)
 
-## 让 component 里面的按钮在不同的页面作出不同的反应
+## 5、让 component 里面的按钮在不同的页面作出不同的反应
 
 ​		一般是在 component 中的部件在不同的页面作出不同的反应。
 
@@ -160,9 +160,30 @@
 
 
 
-## 不切换页面单是内容动态变换 - Dynamic Panel 
+## 6、不切换页面单是内容动态变换 - Dynamic Panel 
 
 ​		使用：**动态面板**
 
 ​		这种交互通常使用 **动态面板** 
 
+## 7、实现Tab标签-Selection Group
+
+​		前面实现的登录框，都是属于选中状态，是不对的。正确的是当点击密码登录的时候， 快速登录 选项是未选中，为灰色的。
+
+​		选中需要组合的部件，右键选择 Selection Group
+
+​		![image-20210917234334713](README.assets/image-20210917234334713.png)
+
+![image-20210917234435372](README.assets/image-20210917234435372.png)
+
+![image-20210918003320531](README.assets/image-20210918003320531.png)
+
+![image-20210918003444398](README.assets/image-20210918003444398.png)
+
+
+
+需要新添加选中后的样式，
+
+![image-20210918003550875](README.assets/image-20210918003550875.png)
+
+![image-20210918003635044](README.assets/image-20210918003635044.png)

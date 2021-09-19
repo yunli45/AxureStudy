@@ -393,3 +393,121 @@ Axure 也提供了部分快捷键快速的绘图：[Axure RP 9酷炫新功能：
 
 ![image-20210919185810165](README.assets/image-20210919185810165.png)
 
+## 12、实战篇-浮动菜单效果【弹出菜单框】
+
+某些二级菜单需要鼠标放到一级菜单上，才浮动显示
+
+### 1、部件
+
+1. 文本框：显示一级和二级菜单中的内容
+2. selected Group: 将二级菜单构成一组显示
+
+### 2、过程
+
+1、构建一级菜单
+
+​		一个文本框内容为 **商品分类**
+
+![image-20210919210329620](README.assets/image-20210919210329620.png)
+
+2、构建二级菜单，并构建为  **Group**
+
+​		将文本框进行复制一列，右键(ctrl + G) --> **Group** --> 右侧 **Style ** 设置 group的名为为 ：**menu** --> 设置该部件为 默认 **隐藏状态**
+
+![image-20210919210604623](README.assets/image-20210919210604623.png)
+
+![image-20210919210808070](README.assets/image-20210919210808070.png)
+
+3、为一级菜单设置**浮动交互**
+
+3.1 左侧 **New Interactions**  新建 Event **Mouse Enter**
+
+![image-20210919210924305](README.assets/image-20210919210924305.png)
+
+3.2添加 Action **Show/Hide** 选择二级菜单
+
+![image-20210919211044300](README.assets/image-20210919211044300.png)
+
+![image-20210919211116726](README.assets/image-20210919211116726.png)
+
+3.3 设置显示和隐藏的效果：
+
+![image-20210919211356330](README.assets/image-20210919211356330.png)
+
+4、预览：
+
+​	当鼠标移到一级菜单的时候，二级菜单浮动显示；移开的时候，在隐藏
+
+
+
+## 13、实战篇-TAB标签页切换效果
+
+​		参考 7、实现Tab标签-Selection Group 这个。
+
+​		Tab 标签页的实现，分为几个Tab标签，并且点击一个便签为选中状态的时候其他都都是未选中状态（Selected Group 部件）；并且每一个Tab有一个对应的内容（Dynamic Panel 部件 实现）。
+
+### 1、部件
+
+box框：设定几个Tab标签横排排列
+
+Selected Group: 实现Tab标签只能选中其中一个
+
+Dynamic Panel :实现每个Tab对应的内容
+
+### 2、过程
+
+1、先为一个 Tab 指定 **Selected ** 样式,当选中的时候图标显示为红色，用于区分是否被选中。  
+
+![image-20210919233309182](README.assets/image-20210919233309182.png)
+
+![image-20210919233827908](README.assets/image-20210919233827908.png)
+
+![image-20210919233855856](README.assets/image-20210919233855856.png)
+
+![image-20210919233959168](README.assets/image-20210919233959168.png)
+
+2、设置Tab的 **选中 Event** :  **Click or Tap** 
+
+![image-20210919234424408](README.assets/image-20210919234424408.png)
+
+设置点击事件的 Action :**Set selected/Checked**
+
+![image-20210919234707943](README.assets/image-20210919234707943.png)
+
+![image-20210919234904507](README.assets/image-20210919234904507.png)
+
+3、复制多个为一排组成Tab
+
+​	此时是可以都选中的，可以进行预览，每个点击下会发现都是红色选中状态。
+
+![image-20210919235030735](README.assets/image-20210919235030735.png)
+
+4、设置 **Selected Group** 设定一组只能选中一个
+
+​		使用 shift 选中所有的 tab 右键选择 **Selected Group** 。此时再次预览发现只有点击的tab 才是红色选中状态
+
+![image-20210919235303258](README.assets/image-20210919235303258.png)
+
+![image-20210919235410540](README.assets/image-20210919235410540.png)
+
+5、为每一个Tab设置相应的内容 :**Dynamic Panel**
+
+​		拖入一个动态面板到TAB标签下，调整宽度和高度。再设置3个 **State**,
+
+![image-20210919235543495](README.assets/image-20210919235543495.png)
+
+在每个 **State** 中拖入一个文本框，输入相应的内容
+
+![image-20210919235743846](README.assets/image-20210919235743846.png)
+
+再为每一个Tab 标签添加一个 **Action** 设置对应的**State **
+
+![image-20210920002515028](README.assets/image-20210920002515028.png)
+
+![image-20210920002615442](README.assets/image-20210920002615442.png)
+
+6、预览
+
+点击相应的Tab 被选中的时候为红色状态，并且显示相应的内容
+
+![image-20210920002703286](README.assets/image-20210920002703286.png)

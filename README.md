@@ -3,11 +3,21 @@
 
 # 注意事项
 
-​		Axure 中 component（**组件**） 是单独罗列出来的，在 版本10中代替了 9 的Master 的， 所以在学习的时候，对于按钮、label、标题等统一称为 **部件** 或者  **按钮**. 
+​		1、Axure 中 component（**组件**） 是单独罗列出来的，在 版本10中代替了 9 的Master 的， 所以在学习的时候，对于按钮、label、标题等统一称为 **部件** 或者  **按钮**. 
+
+​		2、Axure 的交互由 enevt(事件) -> cases (情况) ->Actions(动作) 组成。 即对一个部件添加交互的时候需要先添加 这个 部件的事件，比如 点击、单击、双击、text change 等 ， 再在对应的事件下添加 情况（非必选  可以直接添加动作），最后添加 相应的 动作
+
+​		3、参照 哔哩哔哩上的课程 ：
+
+​				 [Axure 9 全面教程：所有功能讲解+高级效果实现]([Axure 9 全面教程：所有功能讲解+高级效果实现_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV18t411p7ex?p=1)) 
+
+​				([(17条消息) Axure_阿甘兄-CSDN博客](https://blog.csdn.net/qq_20042935/category_9823775.html))
 
 ## 已学习
 
 ​		1、官网的 Axure中文版使用指南 PPT 文件初步认识软件界面
+
+
 
 ## 待学习
 
@@ -172,18 +182,106 @@
 
 ​		选中需要组合的部件，右键选择 Selection Group
 
-​		![image-20210917234334713](README.assets/image-20210917234334713.png)
+### 		**组件** ：  
 
-![image-20210917234435372](README.assets/image-20210917234435372.png)
+​			Dynamic Panel  、Selection Group
+
+### 		**过程：**
+
+#### 			1、Selection Group
+
+​				使用 shift 选中所有需要设置的部件，此时为 **密码登录框** 、 **快速登录** ，右键 **Selection Group** 进行组合
+
+![image-20210917234334713](README.assets/image-20210917234334713.png)
+
+
+
+#### ![image-20210917234435372](README.assets/image-20210917234435372.png)
+
+#### 2、 新添加 **按钮选中样式**
+
+1、打开 **Widget Style Manager**  面板： 
+
+1.  菜单栏 **project** ->  **Widget Style Manager**
+2. 工具栏： ![image-20210919011149836](README.assets/image-20210919011149836.png)
+
+2、点击 **Widget Style Manager**  面板 上面 **add** 进行添加样式， 设置填充为 **白色**
+
+
+
+![image-20210919011437290](README.assets/image-20210919011437290.png)
+
+
+
+#### 3、为两个部件分别设置 选中的样式： 
+
+​		点击第一个按钮，点击左侧的 **shape properties** (形状属性)  的 **selection Group** 选择我们新建的 **selection Group** ；
+
+点击 **Add Style Effect** 设置选中的样式；点击 **Show all** 将第一个按钮设置为默认选中状态
+
+​		点击第二个按钮同样的进行设置。只是不设置为默认选中
+
+​		
+
+
 
 ![image-20210918003320531](README.assets/image-20210918003320531.png)
 
-![image-20210918003444398](README.assets/image-20210918003444398.png)
+![image-20210919080252074](README.assets/image-20210919080252074.png)
+
+![image-20210919080333491](README.assets/image-20210919080333491.png)
+
+![image-20210919080434071](README.assets/image-20210919080434071.png)
 
 
 
-需要新添加选中后的样式，
+#### 4、为两个按钮设置选中的动作
 
-![image-20210918003550875](README.assets/image-20210918003550875.png)
+1. 选中第一个按钮，在原来的**点击** 的事件下新建添加一个 **Action **  为 **selected**
 
-![image-20210918003635044](README.assets/image-20210918003635044.png)
+![image-20210919081225164](README.assets/image-20210919081225164.png)
+
+![image-20210919081240828](README.assets/image-20210919081240828.png)
+
+![image-20210919081305740](README.assets/image-20210919081305740.png)
+
+
+
+#### 5、最终样式
+
+![image-20210919081422692](README.assets/image-20210919081422692.png)
+
+![image-20210919081449056](README.assets/image-20210919081449056.png)
+
+
+
+## 8、变量、表达式 - 案例 计算商品总价
+
+[Axure快速入门（09） -变量和表达式（计算商品总价例子]([(17条消息) Axure快速入门（09） -变量和表达式（计算商品总价例子）_阿甘兄-CSDN博客](https://blog.csdn.net/qq_20042935/article/details/112506389))
+
+**元件组成**： 左侧是 box 框显示 单价、数量、总价；右侧是文本框可以属于文字、数字，才能进行计算。
+
+**过程**： 
+
+​	1、将总价显示框 设置一个 text change 事件； 添加  set text 动作，选择相应的目标框和 value ；
+
+​	2、设置value 的时候 添加本地变量 和 表达式， 每一个变量对应一个相应的文本框的值， 表达式使用 [[ ]] 括起来。
+
+​	3、 最后将三个文本框（单价、数量、总价）设置同样的事件，可以通过 复制 粘贴进行快速设置。
+
+​	4、预览
+
+![image-20210918231324986](README.assets/image-20210918231324986.png)
+
+![image-20210918231358731](README.assets/image-20210918231358731.png)![image-20210918231428338](README.assets/image-20210918231428338.png)![image-20210918231509518](README.assets/image-20210918231509518.png)![image-20210918231617509](README.assets/image-20210918231617509.png)
+
+![image-20210918231824964](README.assets/image-20210918231824964.png)
+
+**预览**
+
+![image-20210918232044301](README.assets/image-20210918232044301.png)
+
+![image-20210918232058307](README.assets/image-20210918232058307.png)
+
+## 9、带有添加的事件 - 手机号为11位的时候才能点击发送验证码
+

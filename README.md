@@ -182,7 +182,7 @@
 
 ​		选中需要组合的部件，右键选择 Selection Group
 
-### 		**组件** ：  
+### 		**部件** ：  
 
 ​			Dynamic Panel  、Selection Group
 
@@ -283,5 +283,76 @@
 
 ![image-20210918232058307](README.assets/image-20210918232058307.png)
 
-## 9、带有添加的事件 - 手机号为11位的时候才能点击发送验证码
+## 9、带有条件的事件 - 手机号为11位的时候才能点击发送验证码
 
+​		在满足某些条件的时候进行相应的操作。
+
+### **部件**：
+
+1. **文本框**：用于获取手机号
+2. **box**：显示“手机号” 文本和显示一个边框 
+3. **按钮**：用于触发事件
+
+**过程：**
+
+#### 1、设置原形图
+
+​	此时未设置任何样式
+
+![image-20210919114608055](README.assets/image-20210919114608055.png)
+
+#### 2、设置按钮禁用状态和样式
+
+##### 	1、按钮默认设置**禁用**状态的样式
+
+​			右键 -》 style Effects -》disable 
+
+![image-20210919115122363](README.assets/image-20210919115122363.png)
+
+##### 2、设置按钮为  **禁用** 为默认状态
+
+​		 右键 -》 disable 
+
+​		此时预览会发现按钮为灰色状态
+
+![image-20210919120519574](README.assets/image-20210919120519574.png)
+
+![](README.assets/image-20210919115353786.png)
+
+#### 3、为文本框设置条件
+
+​		1、**选中文本框** -》 左侧添加交互 **new Iteraction** => 添加event **Text Change**  ==>  
+
+![image-20210919122115988](README.assets/image-20210919122115988.png)
+
+![image-20210919122249313](README.assets/image-20210919122249313.png)
+
+2、添加 case1 当文本框的值等于 11 位的时候
+
+![image-20210919122415383](README.assets/image-20210919122415383.png)
+
+![image-20210919122509678](README.assets/image-20210919122509678.png)
+
+3、为 cases1 设置 action ,当满足cases 1的时候 **发送验证码按钮** 设置为 **Enable** 状态
+
+​		点击 case1 会出现 Add Action ,添加 **Enable/Unable** 动作，设置满足该 case1 时 **发送验证码按钮** 的 action 为 **Enable**
+
+![image-20210919123130433](README.assets/image-20210919123130433.png)
+
+![image-20210919123210412](README.assets/image-20210919123210412.png)
+
+![image-20210919123234396](README.assets/image-20210919123234396.png)
+
+4、为文本框添加case2 ,不设置任何条件， 设置 case2 的 action ：**Enable/Unable** ，目标为：**发送验证码按钮**， 状态为： **Unable**
+
+![image-20210919123417564](README.assets/image-20210919123417564.png)
+
+![image-20210919123609474](README.assets/image-20210919123609474.png)
+
+#### 4、预览
+
+​	当满足11位的时候按钮可以使用，不满足的时候按钮不能使用
+
+![image-20210919123703359](README.assets/image-20210919123703359.png)
+
+![image-20210919123718669](README.assets/image-20210919123718669.png)
